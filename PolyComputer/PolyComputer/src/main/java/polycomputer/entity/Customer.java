@@ -49,7 +49,7 @@ public class Customer implements Serializable{
     @JoinColumn(name = "roleId")
     Role role;
 	@JsonIgnore
-	@OneToMany(mappedBy = "customerId")//1 thg co nhieu don hang
+	@OneToMany(mappedBy = "username")//1 thg co nhieu don hang
 	List<Order> orders;
 	@JsonIgnore
 	@OneToMany(mappedBy = "ratingId")//1 thg co nhieu binh luan

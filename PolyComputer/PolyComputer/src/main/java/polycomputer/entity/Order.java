@@ -43,8 +43,8 @@ public class Order  implements Serializable{
 	@Column(name = "updated_At")
 	Date updatedAt = new Date();
 	@ManyToOne
-	@JoinColumn(name = "customerId")
-	Customer customerId;
+	@JoinColumn(name = "username")
+	Customer username;
 	@JsonIgnore
 	@OneToMany(mappedBy = "orderId")
 	List<OrderDetail> orderDetails;
